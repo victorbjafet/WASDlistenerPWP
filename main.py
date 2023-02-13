@@ -7,16 +7,16 @@ def on_press(key):
     global is_released
     if is_released: #if the is_released bool has been set back to true, basically if it isnt the 2nd pressed event in a row
         if key == KeyCode.from_char('w'):
-            requests.get('http://10.0.0.213:5000/forwardUndef')
+            requests.get('http://192.168.1.111:5000/forwardUndef')
             print(f'pressed w: {key}')
         elif key == KeyCode.from_char('s'):
-            requests.get('http://10.0.0.213:5000/backwardUndef')
+            requests.get('http://192.168.1.111:5000/backwardUndef')
             print(f'pressed s: {key}')
         elif key == KeyCode.from_char('a'):
-            requests.get('http://10.0.0.213:5000/leftUndef')
+            requests.get('http://192.168.1.111:5000/leftUndef')
             print(f'pressed a: {key}')
         elif key == KeyCode.from_char('d'):
-            requests.get('http://10.0.0.213:5000/rightUndef')
+            requests.get('http://192.168.1.111:5000/rightUndef')
             print(f'pressed d: {key}')
         else:
             print(f'invalid press: {key}')
@@ -26,16 +26,16 @@ def on_release(key):
     global is_released
     is_released = True
     if key == KeyCode.from_char('w'):
-        requests.get('http://10.0.0.213:5000/stop')
+        requests.get('http://192.168.1.111:5000/stop')
         print(f'released w: {key}')
     elif key == KeyCode.from_char('s'):
-        requests.get('http://10.0.0.213:5000/stop')
+        requests.get('http://192.168.1.111:5000/stop')
         print(f'released s: {key}')
     elif key == KeyCode.from_char('a'):
-        requests.get('http://10.0.0.213:5000/stop')
+        requests.get('http://192.168.1.111:5000/stop')
         print(f'released a: {key}')
     elif key == KeyCode.from_char('d'):
-        requests.get('http://10.0.0.213:5000/stop')
+        requests.get('http://192.168.1.111:5000/stop')
         print(f'released d: {key}')
     elif key == Key.esc:
         # Stop listener
